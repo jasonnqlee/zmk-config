@@ -31,28 +31,34 @@ include <dt-bindings/zmk/bt.h>
 
         default_layer {
             display-name = "default";
-// ------------------------------------------------------------------------------------------------------------
-// |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |       |
-// |  ESC  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   | BKSPC |
-// |  TAB  |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
-// | SHIFT |  Z  |  X  |  C   |  V   |  B   |  MUTE  |  |       |  N   |  M    |  ,    |  .   |   /   | SHIFT |
-//               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
-//
-// SCYTHE KEYMAP o"'"',i.,
-//                      ----- ----- ----- -----                   ----- ----- ----- ----- 
-//                     |  2  |  3  |  4  |  5  |                 |  6  |  7  |  8  |  9  |
-//                ----- ----- ----- ----- -----                   ----- ----- ----- ----- -----
-//               |  1  |  W  |  F  |  P  |  G  |                 |  J  |  L  |  U  |  Y  |  0  |    
-//          ----- ----- ----- ----- ----- -----                   ----- ----- ----- ----- ----- -----
-//         | tab |  Q  |  R  |  S  |  T  |  D  |                 |  H  |  N  |  I  |  O  |  :  |     |
-//    ----- ----- ----- ----- ----- ----- -----                   ----- ----- ----- ----- ----- ----- -----
-//   | esc |     |  A  |  X  |  C  |  V  |  B  |                 |  K  |  M  |  <.  |.>  |  "  |     |     |
-//    ----- ----- ----- ----- ----- ----- ----- -----       ----- ----- ----- ----- ----- ----- ----- -----
-//         | crl |  Z  |     |     |     |Lower|space|     |dltBk|Raise|     |     |     |  /? |     |
-//          ----- -----       ----- ----- ----- -----       ----- ----- ----- -----       ----- -----
-//                                             |Scrll|     |vol |
-//                                              -----       -----
-            bindings = <
+
+// SCYTHE KEYMAP 
+ bindings = <
+//                                _________ _________ _________ _________                          _________ _________ _________ _________
+//                               |    2    |    3    |    4    |    5    |                        |    6    |    7    |    8    |    9    |
+                                    &kp N2   &kp N3   &kp N4    &kp N5                             &kp N6     &kp N7   &kp N8    &kp N9
+//                      _________ _________ _________ _________ _________                          _________ _________ _________ _________ _________
+//                     |    1    |    W    |    F    |    P    |    G    |                        |    J    |    L    |    U    |    Y    |    0    |    
+                          &kp N1    &kp W    &kp F    &kp P     &kp G                              &kp J      &kp L    &kp U     &kp Y      &kp N0
+//            _________ _________ _________ _________ _________ _________                          _________ _________ _________ _________ _________ _________
+//           |   tab   |    Q    |    R    |    S    |    T    |    D    |                        |    H    |    N    |    I    |    O    |    ;    |  home   |
+              &kp TAB     &kp Q     &kp R    &kp S    &kp T     &kp D                              &kp H      &kp N    &kp I     &kp O      &kp SEMI &kp HOME
+//  _________ _________ _________ _________ _________ _________ _________                          _________ _________ _________ _________ _________ _________ _________
+// |   esc   |    ~`   |    A    |    X    |    C    |    V    |    B    |                        |    K    |    M    |    <,   |   .>    |    "    |  enter  |   end   | 
+     &kp ESC  &kp GRAVE   &kp A     &kp X    &kp C    &kp V     &kp B                              &kp K      &kp M    &kp COMMA &kp PERIOD &kp SQT  &kp RET    &kp END
+//  --------- _________ _________ --------- _________ _________ _________ _________|    |_________ _________ _________ _________ _________ _________ _________ ---------
+//           |  Lctrl  |    z    |         |   Alt   |  Shift  |  Lower  |  space  |    |  BKSPC  |  Raise  |   WIN   |   DLT   |         |    /?   |  PRINT  |
+              &kp LCTRL   &kp Z              &kp LALT &kp LSHFT &lt lower &kp SPACE      &kp BSPC  &tog raise &kp RWIN &kp DLT              &kp FSLH &kp PSCRN
+//            --------- ----------          --------- _________ --------- ---------|    |--------- --------- _________ ---------           --------- ---------
+//                                                   |  Scrll  |                                            |   vol   |
+                                                      &kp C_PP                                                &kp C_MUTE      
+//                                                            
+>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
+        };
+
+
+bindings = <
 &kp GRAVE &kp N1 &kp N2   &kp N3   &kp N4    &kp N5                           &kp N6 &kp N7    &kp N8    &kp N9   &kp N0   &none
 &kp ESC   &kp Q  &kp W    &kp E    &kp R     &kp T                            &kp Y  &kp U     &kp I     &kp O    &kp P    &kp BSPC
 &kp TAB   &kp A  &kp S    &kp D    &kp F     &kp G                            &kp H  &kp J     &kp K     &kp L    &kp SEMI &kp SQT
