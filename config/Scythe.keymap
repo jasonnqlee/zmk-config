@@ -62,23 +62,23 @@ include <dt-bindings/zmk/bt.h>
 // SCYTHE KEYMAP MATHS 
                bindings = <
 //                                _________ _________ _________ _________                          _________ _________ _________ _________
-//                               |    2    |    3    |    4    |    5    |                        |    6    |    7    |    8    |    9    |
-                                    &kp N2   &kp N3   &kp N4    &kp N5                             &kp N6     &kp N7   &kp N8    &kp N9
+//                               |   F2    |    #    |    $    |    %    |                        |    &    |    {    |    }    |    [    |                            
+                                   &kp F2    &kp HASH  &kp DLLR  &kp PRCNT                         &kp AMPS   &kp LBRC  &kp RBRC &kp LBKT
 //                      _________ _________ _________ _________ _________                          _________ _________ _________ _________ _________
-//                     |    1    |    W    |    F    |    P    |    G    |                        |    J    |    L    |    U    |    Y    |    0    |    
-                          &kp N1    &kp W    &kp F    &kp P     &kp G                              &kp J      &kp L    &kp U     &kp Y      &kp N0
+//                     |    F1   |    P    |    UP   |    /    |    ^    |                        |   DEL   |    7    |    8    |    9    |    ]    |          
+                         &kp F1    &kp P     &kp UP    &kp FSLH  &kp CARET                         &kp DLT    &kp N7    &kp N8   &kp N9    &kp RBKT
 //            _________ _________ _________ _________ _________ _________                          _________ _________ _________ _________ _________ _________
-//           |   tab   |    Q    |    R    |    S    |    T    |    D    |                        |    H    |    N    |    E    |    O    |    ;    |  home   |
-              &kp TAB     &kp Q     &kp R    &kp S    &kp T     &kp D                              &kp H      &kp N    &kp I     &kp O      &kp SEMI &kp HOME
+//           |   tab   |    =    |   Left  |   down  |  right  |    E    |                        |    *    |    4    |    5    |    6    |    <    |    >    |        
+              &kp TAB    &kp EQUAL &kp LEFT  &kp DOWN  &kp RIGHT &kp E                             &kp ASTRK  &kp N4    &kp N5   &kp N6    &kp LT   &kp GT
 //  _________ _________ _________ _________ _________ _________ _________                          _________ _________ _________ _________ _________ _________ _________
-// |   esc   |    ~`   |    A    |    X    |    C    |    V    |    B    |                        |    K    |    M    |    <,   |   .>    |    "    |  enter  |   end   | 
-     &kp ESC  &kp GRAVE   &kp A     &kp X    &kp C    &kp V     &kp B                              &kp K      &kp M    &kp COMMA &kp PERIOD &kp SQT  &kp RET    &kp END
+// |   esc   |   \|\   |    (     |   HOME  |   END   |    .    |    -    |                        |    +    |    1    |    2    |    3    |    )   |    :    |    ;    | 
+     &kp ESC  &kp NUBS   &kp LPAR  &kp HOME  &kp END   &kp DOT   &kp MINUS                         &kp PLUS   &kp N1    &kp N2   &kp N3    &kp RPAR &kp COLON   &kp SEMI         
 //  --------- _________ _________ --------- _________ _________ _________ _________|    |_________ _________ _________ _________ _________ _________ _________ ---------
-//           |  Lctrl  |    z    |         |   Alt   |  Shift  |  Lower  |  space  |    |  BKSPC  |  Raise  |   WIN   |   DLT   |         |    /?   |  PRINT  |
-              &kp LCTRL   &kp Z              &kp LALT &kp LSHFT &lt lower &kp SPACE      &kp BSPC  &tog raise &kp RWIN &kp DLT              &kp FSLH &kp PSCRN
+//           |  Lctrl  |    $    |         |   Alt   |  Shift  |  Lower  |  BKSPC  |    |  SPACE  |  Raise  |    0    |   DLT   |         |    !    |  PRINT  |
+              &kp LCTRL  &kp Z               &kp LALT &kp LSHFT &lt lower &kp BSPC      &kp SPACE  &tog raise &kp N0    &kp DLT            &kp EXCL  &kp PSCRN
 //            --------- ----------          --------- _________ --------- ---------|    |--------- --------- _________ ---------           --------- ---------
-//                                                   |  Scrll  |                                            |   vol   |
-                                                      &kp C_PP                                                &kp C_MUTE      
+//                                                   |  Scrll  |                                            |  ENTER  |
+                                                      &kp C_PP                                                &kp RET      
 //                                                            
 >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
