@@ -98,7 +98,7 @@ include <dt-bindings/zmk/bt.h>
               &kp TAB    &trans    &kp A     &kp S    &kp D     &kp G                              &kp LEFT   &kp DOWN &kp RIGHT &trans     &trans   &trans
 //  _________ _________ _________ _________ _________ _________ _________                          _________ _________ _________ _________ _________ _________ _________
 // |   esc   |   PRNT   |    Z     |    X   |    C    |         |    J    |                        |         |         |         |         |        |         |         | 
-     &kp ESC  &kp PSCRN  &kp Z     &kp X     &kp C    &trans    &kp j                              &trans     &trans   &trans    &trans     &trans   &trans    &trans        
+     &kp ESC  &kp PSCRN  &kp Z     &kp X     &kp C    &trans    &kp j                              &trans     &trans   &trans    &trans     &trans   &kp RGUI    &trans        
 //  --------- _________ _________ --------- _________ _________ _________ _________|    |_________ _________ _________ _________ _________ _________ _________ ---------
 //           |  Lctrl  |   BT1   |         |   Alt   |  Shift  |  Lower  |  BKSPC  |    |  SPACE  |  Raise  |         |   DLT   |         |    !    |  PRINT  |
               &kp LCTRL  &bt BT_SEL 1        &kp LALT &kp LSHFT &trans    &kp BSPC      &kp SPACE  &tog raise &trans   &trans               &kp EXCL &kp PSCRN
